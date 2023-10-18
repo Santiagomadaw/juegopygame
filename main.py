@@ -60,11 +60,13 @@ class Game():
             loadedRunner = Runner(self.__sprites[indice],self.__startLine, runner)
             loadedRunner.name =self.__names[indice]
             self.runners.append(loadedRunner)
-         
-        
+   
 
     def run(self):
         
+        pygame.mixer.music.load('./music/dragon_ball_z_8_bits.mp3')
+        pygame.mixer.music.play()
+        pygame.mixer.music.set_volume(0.1)
         gameOver = False
         while not gameOver:
             #gestion de eventos
